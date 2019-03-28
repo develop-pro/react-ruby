@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.TabbedPanels {margin: 0px;padding: 0px;float: left;clear: none;width: 100%;}
+.TabbedPanelsTabGroup {margin: 0px;padding: 0px;}
+.TabbedPanelsTab {position: relative;top: 1px;float: left;padding:15px 0; color:#39b54a; margin: 0px 1px 0px 0px;font-size:16px; font-weight:700; list-style: none;border-bottom: solid 1px #CCC; border-right: solid 4px transparent;-moz-user-select: none;-khtml-user-select: none;cursor: pointer;}
+.TabbedPanelsTabHover {border-right:4px solid #39b54a !important;}
+.TabbedPanelsContentGroup {clear: both;border-left: solid 1px #CCC;background-color: #fff;}
+.TabbedPanelsContent {padding:0;}
+.TabbedPanelsContentVisible {}
+.VTabbedPanels .TabbedPanelsTabGroup {float: left;width:150px; position: relative;}
+.VTabbedPanels .TabbedPanelsTab {float: none;margin: 0px;border-top: none;border-left: none;border-right: none;}
+.VTabbedPanels .TabbedPanelsTabSelected {border-right:4px solid #39b54a;}
+.VTabbedPanels .TabbedPanelsContentGroup {clear: none;float: left;padding: 0px;width:86%;min-height:250px;}

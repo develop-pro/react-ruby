@@ -1,0 +1,9 @@
+FROM node:7.4
+RUN npm install -g yarn
+ENV APP_HOME /home/app/frontend
+WORKDIR $APP_HOME
+ADD ./frontend/package.json $APP_HOME/
+ADD ./frontend/yarn.lock $APP_HOME/
+Add ./frontend $APP_HOME
+RUN yarn install
+CMD yarn start

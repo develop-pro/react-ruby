@@ -1,0 +1,15 @@
+# Build Environment
+FROM node:7.4 as builder
+RUN npm install -g yarn
+ENV APP_HOME /home/app/frontend
+WORKDIR $APP_HOME
+ADD ./frontend/package.json $APP_HOME/
+ADD ./frontend/yarn.lock $APP_HOME/
+Add ./frontend $APP_HOME
+RUN yarn install
+RUN npm install react-scripts@1.1.1 -g --silent
+RUN yarn build
+
+# production environment
+FROM nginx:1.13.9-alpine
+COPY --from=builder /home/app/frontend/build /home/app/frontend/
